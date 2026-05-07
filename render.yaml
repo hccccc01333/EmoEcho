@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: emoecho
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_BASE_URL
+        value: https://api.deepseek.com
+      - key: MODEL_NAME
+        value: deepseek-v4-flash
+      - key: JUDGE_MODEL
+        value: deepseek-v4-pro

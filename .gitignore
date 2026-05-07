@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+
+# Data (large files)
+data/raw/*
+data/vector_store/*
+!data/README.md
+!data/raw/.gitkeep
+!data/vector_store/.gitkeep
+
+# Persona profiles (user private data)
+data/personas/*
+!data/personas/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tauri build
+app/desktop/src-tauri/target/
+app/desktop/node_modules/
+app/desktop/dist/
+
+# Frontend
+app/web/node_modules/
+app/web/dist/
+
+# Conversations (user private data)
+data/conversations/*
+!data/conversations/.gitkeep
+
+# Logs
+logs/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/

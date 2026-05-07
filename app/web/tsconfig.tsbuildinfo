@@ -1,0 +1,1 @@
+{"root":["./src/layout.tsx","./src/api.ts","./src/main.tsx","./src/components/ambientbackground.tsx","./src/components/pagetransition.tsx","./src/components/petwidget.tsx","./src/pages/archivepage.tsx","./src/pages/chatpage.tsx","./src/pages/insightdashboard.tsx","./src/pages/profilepage.tsx","./src/pages/settingspage.tsx"],"version":"5.9.3"}

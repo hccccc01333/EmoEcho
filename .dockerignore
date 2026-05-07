@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+.git
+.env
+node_modules
+*.egg-info
+.pytest_cache
+.venv
+notebooks
+app/web/node_modules
