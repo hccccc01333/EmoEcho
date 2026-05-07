@@ -4,26 +4,10 @@ uvicorn>=0.32.0
 pydantic>=2.10.0
 python-dotenv>=1.0.0
 python-multipart>=0.0.12
-sse-starlette>=2.0.0
 
 # LLM
 openai>=1.60.0
-langchain>=0.3.0
-langchain-openai>=0.3.0
-langchain-community>=0.3.0
 
-# Memory & Vector
-sqlite-vec>=0.1.0
-numpy>=1.26.0
-
-# NLP / Emotion
+# NLP
 jieba>=0.42.1
-transformers>=4.45.0
-
-# Data
-pandas>=2.2.0
-
-# Dev
-jupyter>=1.0.0
-ipykernel>=6.29.0
-pytest>=8.3.0
+numpy>=1.26.0
