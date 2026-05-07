@@ -567,11 +567,18 @@ if _DIST_DIR.exists():
     from fastapi.staticfiles import StaticFiles
     from fastapi.responses import FileResponse
 
+    _API_PREFIXES = (
+        "/chat", "/persona", "/memory", "/insights", "/health",
+    )
+
+    app.mount("/assets", StaticFiles(directory=str(_DIST_DIR / "assets")), name="assets")
+
     @app.get("/{full_path:path}")
     async def serve_spa(full_path: str):
+        if full_path and any(full_path.startswith(p.lstrip("/")) for p in _API_PREFIXES):
+            from fastapi import HTTPException
+            raise HTTPException(404, "API endpoint not found")
         file = _DIST_DIR / full_path
         if file.exists() and file.is_file():
             return FileResponse(file)
         return FileResponse(_DIST_DIR / "index.html")
-
-    app.mount("/assets", StaticFiles(directory=str(_DIST_DIR / "assets")), name="assets")
